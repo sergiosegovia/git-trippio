@@ -1,0 +1,35 @@
+
+<section class="trip-list row">
+  <div class="container">
+    <h4>These are the new trips, pick one to edit</h4>
+
+    <div class="trip trip-edit" [class.hide]="show == false">
+      <label for="title">Give a title to your trip</label>
+      <input type="text" id="title" [(ngModel)]="trip.title">
+      <label for="arrival_date">When start your trip?</label>
+      <input type="text" id="arrival_date" [(ngModel)]="trip.arrival_date">
+      <label for="description">Tell us more about your trip</label>
+      <input type="text" id="description" [(ngModel)]="trip.description">
+      <button (click)="onShow()">Close</button>
+    </div>
+
+    <div class="box" *ngFor="let trip of trips">
+      <div class="trip" (click)="selectTrip(trip)" [class.trip-selected]="selectedTrip == trip" >
+        <div class="trip-header">
+          <div class="trip-title">
+            <h3>{{ trip.title }}</h3>
+          </div>
+          <div class="trip-arrival">
+            <span>{{ trip.arrival_date }}</span>
+          </div>
+        </div>
+
+        <div class="trip-details">
+          <div class="trip-desc">
+            {{ trip.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

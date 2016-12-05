@@ -1,0 +1,35 @@
+.trip-list {
+  padding: .5em;
+}
+
+.trip {
+  background-color: aliceblue;
+  border: 1px solid black;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+
+.trip-selected {
+  background-color: #ffa685;
+}
+
+.trip-header {
+  background-color: #fff1dc;
+  width: 100%;
+  overflow: hidden;
+  padding: .125em .250em;
+  margin-bottom: .5em;
+}
+
+.trip-details {
+  background-color: #fbfbfb;
+  padding: .125em .250em;
+}
+
+.trip-title {
+  float: left;
+}
+
+.trip-arrival {
+  float: right;
+}
